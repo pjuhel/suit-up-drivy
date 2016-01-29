@@ -1,91 +1,88 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html>
-  <head>
-    <title>CSS/HTML Workshop with Drivy</title>
-    <link rel="stylesheet" type="text/css" href="styleDrivy.css">
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <style type="text/css">
-    html, body {
-      margin: 0px;
-      padding: 0px;
-      border: 0px;
-    }
-    #container {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 0;
-}
-</style>
-  </head>
-  <body>
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-        </ul>
-      </div>
+<head>
+  <title>CSS/HTML Workshop with Drivy</title>
+  <link rel="stylesheet" type="text/css" href="styleDrivy.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation | Welcome</title>
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <style type="text/css">
+  html, body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+  #container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  </style>
+</head>
+<body>
+  <div class="top-bar" style="background-color:deepskyblue;">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <a href="#"><img src="logoDrivy.png"/></a>
+      </ul>
     </div>
-    <div class="row">
-      <div class="small-2 large-2 columns">...</div>
-      <div class="small-4 large-8 columns">
-        <div>
-          <h4>Here, you can compute who's gonna earn what on a rent !</h4>
-        <div id="car">
-          <div class="row">
-            <div class="large-4 columns">
-              <input class="model" type="text" placeholder="Car model"/>
-            </div>
-            <div class="large-4 columns">
-              <input class="price-by-day" type="number" placeholder="Price by day"/>
-            </div>
-            <div class="large-4 columns">
-              <input class="price-by-km" type="number" placeholder="Price by km"/>
-            </div>
+  </div>
+  <div class="callout large primary" style="background-color:white">
+    <div class="row column text-center">
+      <h1> Welcome to Drivy </h1>
+      <h2 class="subheader">Here, you can compute who's gonna earn what on a rent !</h4>
+    </div>
+  <div class="row medium-8 large-7 columns text-center">
+    <div class="blog-post">
+      <div id="car">
+        <div class="row">
+          <div class="large-4 columns">
+            <input class="model" type="text" placeholder="Car model"/>
+          </div>
+          <div class="large-4 columns">
+            <input class="price-by-day" type="number" placeholder="Price by day"/>
+          </div>
+          <div class="large-4 columns">
+            <input class="price-by-km" type="number" placeholder="Price by km"/>
           </div>
         </div>
-        <div id="rental">
-          <div class="row">
-            <div class="large-4 columns">
-                <input class="begin" type="date" placeholder="Rental begin date"/>
-            </div>
-            <div class="large-4 columns">
-              <input class="end" type="date" placeholder="Rental end date"/>
-            </div>
-            <div class="large-4 columns">
-              <input class="distance" type="number" placeholder="Distance in km"/>
-            </div>
-            <div class="large-4 columns"
-              <h5>Deductible option ?</h5>
-              <input class="option" type="checkbox" placeholder="Deductible option"/>
-            </div>
+      </div>
+      <div id="rental">
+        <div class="row">
+          <div class="large-4 columns">
+            <input class="begin" type="date" placeholder="Rental begin date"/>
           </div>
+          <div class="large-4 columns">
+            <input class="end" type="date" placeholder="Rental end date"/>
+          </div>
+          <div class="large-4 columns">
+            <input class="distance" type="number" placeholder="Distance in km"/>
+          </div>
+          <div class="large-4 columns"
+          <h5>Deductible option ?</h5>
+          <input class="option" type="checkbox" placeholder="Deductible option"/>
         </div>
-        <p><a id="compute" href="#" class="medium success button">Compute</a><br/></p>
-        <div id="actors"></div>
-        <script id="template" type="x-tmpl-mustache">
-          {{#actors}}
-            <div class="actor">
-              <span>{{who}}</span>
-              <span>{{type}}</span>
-              <span>{{amount}}</span>
-            </div>
-          {{/actors}}
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-        <script src="drivy.js"></script>
-        <script src="index.js"></script>
-
       </div>
-      </div>
-      <div class="small-2 large-2 columns">...</div>
-
     </div>
-
-
-  </body>
+    <p><a id="compute" href="#" class="medium success button">Compute</a><br/></p>
+    <div id="actors"></div>
+    </div>
+  </div>
+  <script id="template" type="x-tmpl-mustache">
+  {{#actors}}
+  <div class="actor">
+  <span>{{who}}</span>
+  <span>{{type}}</span>
+  <span>{{amount}}</span>
+  </div>
+  {{/actors}}
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+  <script src="drivy.js"></script>
+  <script src="index.js"></script>
+</body>
 </html>
